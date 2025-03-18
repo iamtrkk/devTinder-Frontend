@@ -1,6 +1,6 @@
 import React from "react";
 
-const User = ({ user }) => {
+const User = ({ user, showButtons }) => {
   const { firstName, lastName, gender, age, photoUrl, about, skills } = user;
 
   return (
@@ -16,7 +16,7 @@ const User = ({ user }) => {
         </p>
         <p hidden={!skills?.length}>Skills: {skills?.join(", ")}</p>
 
-        <div className="card-actions justify-end">
+        <div hidden={!showButtons} className="card-actions justify-end">
           <button className="btn btn-primary">Ignore</button>
           <button className="btn btn-secondary">Interested</button>
         </div>

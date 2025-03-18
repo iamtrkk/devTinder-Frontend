@@ -2,10 +2,10 @@ import axios from "axios";
 import React, { useEffect } from "react";
 import { BASE_URL } from "../utils/const";
 import { useDispatch, useSelector } from "react-redux";
-import { addFeed } from "../utils/store/feedSlice";
+import { addFeed } from "../utils/store/feedSlice.js";
 import User from "./cards/user";
 
-const Feed = ({ user }) => {
+const Feed = () => {
   const dispatch = useDispatch();
   const feed = useSelector((store) => store.feed);
 
