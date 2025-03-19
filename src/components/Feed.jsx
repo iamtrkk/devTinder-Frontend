@@ -24,11 +24,34 @@ const Feed = () => {
     loadFeed();
   }, []);
 
+  const handleSendRequest = async (userId, status) => {
+    try {
+      await axios.post(
+        `${BASE_URL}/request/send/${status}/${userId}`,
+        {},
+        { withCredentials: true }
+      );
+      loadFeed();
+    } catch (err) {
+      console.error(err.message);
+    }
+  };
+
+  if (!feed.length) return <div>No user available</div>;
+
+  const user = feed[0];
+
   return (
-    <div className="flex flex-wrap gap-5">
-      {feed?.map((user) => (
-        <User key={user._id} user={user} />
-      ))}
+    <div className="flex flex-wrap gap-5 justify-center">
+      <User
+        key={user._id}
+        user={user}
+        showButtons={true}
+        namePrimary={"Interested"}
+        primaryAction={() => handleSendRequest(user._id, "interested")}
+        nameSeconday={"Ignore"}
+        secondaryAction={() => handleSendRequest(user._id, "ignored")}
+      />
     </div>
   );
 };
