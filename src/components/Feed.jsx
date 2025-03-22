@@ -37,7 +37,7 @@ const Feed = () => {
     }
   };
 
-  if (!feed.length) return <div>No user available</div>;
+  if (!feed?.length) return <div>No user available</div>;
 
   const user = feed[0];
 
