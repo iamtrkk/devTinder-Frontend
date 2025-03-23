@@ -1,5 +1,8 @@
 # React + Vite
 
+# AWS
+ssh -i "devTinder-secret.pem" ubuntu@ec2-13-60-188-87.eu-north-1.compute.amazonaws.com
+
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
 Currently, two official plugins are available:
