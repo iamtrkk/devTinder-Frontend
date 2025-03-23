@@ -3,7 +3,7 @@ import React, { useEffect } from "react";
 import { BASE_URL } from "../utils/const";
 import { useDispatch, useSelector } from "react-redux";
 import { addConnections } from "../utils/store/connectionSlice";
-import User from "./cards/user";
+import User from "./cards/User";
 
 const Connections = () => {
   const dispatch = useDispatch();

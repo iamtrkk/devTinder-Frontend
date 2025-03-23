@@ -3,7 +3,7 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { BASE_URL } from "../utils/const";
 import { addRequests } from "../utils/store/requestSlice";
-import User from "./cards/user";
+import User from "./cards/User";
 
 const Requests = () => {
   const dispatch = useDispatch();
@@ -23,7 +23,6 @@ const Requests = () => {
   useEffect(() => {
     loadRequests();
   }, []);
-
 
   const handleRequestReview = async (reqId, status) => {
     try {
