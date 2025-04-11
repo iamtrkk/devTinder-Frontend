@@ -14,7 +14,6 @@ const EditProfile = ({ user }) => {
     about: user?.about,
     photoUrl: user?.photoUrl,
     skills: user?.skills,
-    verified:user?.verified
   });
   const [error, setError] = useState("");
   const [showToast, setShowToast] = useState(false);
