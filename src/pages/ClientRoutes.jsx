@@ -18,7 +18,7 @@ const ClientRoutes = () => {
             {/* These are basically children routes which will be rendered in
           outlet in previous project Swiggy we use children array for this */}
             <Route path="/" element={<Login />} />
-            <Route path="/login" element={<Login />} />
+            {/* <Route path="/login" element={<Login />} /> */}
             <Route path="/feed" element={<Feed />} />
             <Route path="/profile" element={<Profile />} />
             <Route path="/connections" element={<Connections />} />

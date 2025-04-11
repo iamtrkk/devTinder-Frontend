@@ -14,7 +14,7 @@ const Header = () => {
     try {
       axios.post(BASE_URL + "/logout", {}, { withCredentials: true });
       dispatch(removeUser());
-      navigate("/login");
+      navigate("/");
     } catch (err) {
       console.error(err.message);
     }
