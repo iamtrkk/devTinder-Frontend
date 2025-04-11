@@ -8,7 +8,16 @@ const User = ({
   nameSeconday,
   secondaryAction,
 }) => {
-  const { firstName, lastName, gender, age, photoUrl, about, skills } = user;
+  const {
+    firstName,
+    lastName,
+    gender,
+    age,
+    photoUrl,
+    about,
+    skills,
+    verified,
+  } = user;
 
   return (
     <div className="card bg-base-300 w-96 shadow-sm">
@@ -16,7 +25,9 @@ const User = ({
         <img src={photoUrl} alt="user dp" />
       </figure>
       <div className="card-body">
-        <h2 className="card-title">{firstName + " " + lastName}</h2>
+        <h2 className="card-title">
+          {firstName + " " + lastName + " "} {verified && "✅"}
+        </h2>
         <p>{about}</p>
         <p>
           {gender} {age}
