@@ -25,6 +25,8 @@ const Home = () => {
   };
 
   useEffect(() => {
+    const isMobile = /Mobi|Android/i.test(navigator.userAgent);
+    if (isMobile) alert("For best experience please open as desktop site");
     fetchUser();
   }, []);
 
