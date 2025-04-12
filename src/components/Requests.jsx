@@ -4,10 +4,12 @@ import { useDispatch, useSelector } from "react-redux";
 import { BASE_URL } from "../utils/const";
 import { addRequests } from "../utils/store/requestSlice";
 import User from "./cards/User";
+import { useNavigate } from "react-router-dom";
 
 const Requests = () => {
   const dispatch = useDispatch();
   const requests = useSelector((store) => store.requests);
+  const navigate = useNavigate();
 
   const loadRequests = async () => {
     try {
@@ -16,6 +18,7 @@ const Requests = () => {
       });
       dispatch(addRequests(res.data.data));
     } catch (err) {
+      if (err.status === 401) navigate("/login");
       console.error(err.message);
     }
   };

@@ -22,19 +22,21 @@ const Header = () => {
 
   return (
     <div className="navbar bg-base-100 shadow-sm">
-      <div className="flex-1">
+      <div className="flex flex-1">
         <Link to={"/"} className="btn btn-ghost text-xl">
           Tech Tribe 👨‍💻
         </Link>
-        <Link to={"/"} className="btn btn-ghost text-xl">
-          Home
-        </Link>
-        <Link to={"/connections"} className="btn btn-ghost text-xl">
-          Connections
-        </Link>
-        <Link to={"/requests"} className="btn btn-ghost text-xl">
-          Requests
-        </Link>
+        <div hidden={!user}>
+          <Link to={"/"} className="btn btn-ghost text-xl">
+            Home
+          </Link>
+          <Link to={"/connections"} className="btn btn-ghost text-xl">
+            Connections
+          </Link>
+          <Link to={"/requests"} className="btn btn-ghost text-xl">
+            Requests
+          </Link>
+        </div>
       </div>
       <div className="flex gap-2 mx-3">
         <div hidden={!user} className="flex items-center gap-2.5">

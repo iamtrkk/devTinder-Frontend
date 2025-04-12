@@ -4,11 +4,12 @@ import { BASE_URL } from "../utils/const";
 import { useDispatch, useSelector } from "react-redux";
 import { addConnections } from "../utils/store/connectionSlice";
 import User from "./cards/User";
+import { useNavigate } from "react-router-dom";
 
 const Connections = () => {
   const dispatch = useDispatch();
   const connections = useSelector((store) => store.connections);
-  console.log(connections);
+  const navigate = useNavigate();
 
   const loadConnctions = async () => {
     try {
@@ -17,6 +18,7 @@ const Connections = () => {
       });
       dispatch(addConnections(res.data.data));
     } catch (err) {
+      if (err.status === 401) navigate("/login");
       console.error(err.message);
     }
   };
