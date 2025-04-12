@@ -26,7 +26,7 @@ const Login = () => {
         { withCredentials: true } // required to store cookies and send back in other API calls, also set in backend in cors config
       );
       dispatch(addUser(response.data));
-      navigate("/feed");
+      navigate("/");
     } catch (err) {
       setError(err?.response?.data);
       console.error(err.message);

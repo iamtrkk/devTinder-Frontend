@@ -18,9 +18,9 @@ const Home = () => {
         withCredentials: true,
       });
       dispatch(addUser(res.data));
-      navigate('/feed')
+      navigate("/");
     } catch (err) {
-      if (err.status == 401) navigate("/");
+      if (err.status == 401) navigate("/login");
       console.error(err.message);
     }
   };

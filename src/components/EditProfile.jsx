@@ -79,11 +79,16 @@ const EditProfile = ({ user }) => {
                   type="text"
                   className="input"
                 />
-                <legend className="fieldset-legend">Gender: male | female</legend>
+                <legend className="fieldset-legend">
+                  Gender: male | female
+                </legend>
                 <input
                   value={userData.gender}
                   onChange={(e) =>
-                    setUserData({ ...userData, gender: e.target.value })
+                    setUserData({
+                      ...userData,
+                      gender: e.target.value.toLowerCase(),
+                    })
                   }
                   type="text"
                   className="input"

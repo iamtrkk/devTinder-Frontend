@@ -9,7 +9,7 @@ import { useNavigate } from "react-router-dom";
 const Feed = () => {
   const dispatch = useDispatch();
   const feed = useSelector((store) => store.feed);
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   const loadFeed = async () => {
     try {
@@ -18,7 +18,7 @@ const Feed = () => {
       });
       dispatch(addFeed(respone.data));
     } catch (err) {
-      if(err.status === 401) navigate('/')
+      if (err.status === 401) navigate("/login");
       console.error(err.message);
     }
   };

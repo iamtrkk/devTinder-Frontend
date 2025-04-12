@@ -38,18 +38,24 @@ const Requests = () => {
   };
 
   return (
-    <div className="flex flex-wrap gap-5">
-      {requests?.map((user) => (
-        <User
-          key={user._id}
-          user={user.fromUserId}
-          showButtons={true}
-          namePrimary={"Accept"}
-          primaryAction={() => handleRequestReview(user._id, "accepted")}
-          nameSeconday={"Ignore"}
-          secondaryAction={() => handleRequestReview(user._id, "rejected")}
-        />
-      ))}
+    <div>
+      {requests?.length ? (
+        <div className="flex flex-wrap gap-5">
+          {requests?.map((user) => (
+            <User
+              key={user._id}
+              user={user.fromUserId}
+              showButtons={true}
+              namePrimary={"Accept"}
+              primaryAction={() => handleRequestReview(user._id, "accepted")}
+              nameSeconday={"Ignore"}
+              secondaryAction={() => handleRequestReview(user._id, "rejected")}
+            />
+          ))}
+        </div>
+      ) : (
+        <div>No Requests</div>
+      )}
     </div>
   );
 };

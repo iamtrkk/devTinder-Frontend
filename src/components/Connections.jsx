@@ -26,10 +26,16 @@ const Connections = () => {
   }, []);
 
   return (
-    <div className="flex flex-wrap gap-5">
-      {connections?.map((user) => (
-        <User key={user._id} user={user} showButtons={false} />
-      ))}
+    <div>
+      {connections?.length ? (
+        <div className="flex flex-wrap gap-5">
+          {connections.map((user) => (
+            <User key={user._id} user={user} showButtons={false} />
+          ))}
+        </div>
+      ) : (
+        <div>No Connections</div>
+      )}
     </div>
   );
 };

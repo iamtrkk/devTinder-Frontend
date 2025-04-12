@@ -14,7 +14,7 @@ const Header = () => {
     try {
       axios.post(BASE_URL + "/logout", {}, { withCredentials: true });
       dispatch(removeUser());
-      navigate("/");
+      navigate("/login");
     } catch (err) {
       console.error(err.message);
     }
@@ -23,8 +23,17 @@ const Header = () => {
   return (
     <div className="navbar bg-base-100 shadow-sm">
       <div className="flex-1">
-        <Link to={"/feed"} className="btn btn-ghost text-xl">
-          Dev Tinder 👨‍💻
+        <Link to={"/"} className="btn btn-ghost text-xl">
+          Tech Tribe 👨‍💻
+        </Link>
+        <Link to={"/"} className="btn btn-ghost text-xl">
+          Home
+        </Link>
+        <Link to={"/connections"} className="btn btn-ghost text-xl">
+          Connections
+        </Link>
+        <Link to={"/requests"} className="btn btn-ghost text-xl">
+          Requests
         </Link>
       </div>
       <div className="flex gap-2 mx-3">
@@ -47,12 +56,7 @@ const Header = () => {
               <li>
                 <Link to={"/profile"}>Profile</Link>
               </li>
-              <li>
-                <Link to={"/connections"}>Connections</Link>
-              </li>
-              <li>
-                <Link to={"/requests"}>Requests</Link>
-              </li>
+
               <li>
                 <a onClick={handleLogout}>Logout</a>
               </li>
