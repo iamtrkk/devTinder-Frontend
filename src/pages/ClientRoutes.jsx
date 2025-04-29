@@ -6,6 +6,7 @@ import Home from "./Home";
 import Feed from "../components/Feed";
 import Connections from "../components/Connections";
 import Requests from "../components/Requests";
+import Chat from "../components/Chat";
 
 const ClientRoutes = () => {
   return (
@@ -21,6 +22,7 @@ const ClientRoutes = () => {
             <Route path="/login" element={<Login />} />
             <Route path="/profile" element={<Profile />} />
             <Route path="/connections" element={<Connections />} />
+            <Route path="/connections/:targetUserId" element={<Chat />} />
             <Route path="/requests" element={<Requests />} />
           </Route>
         </Routes>

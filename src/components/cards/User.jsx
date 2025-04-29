@@ -34,11 +34,19 @@ const User = ({
         </p>
         <p hidden={!skills?.length}>Skills: {skills?.join(", ")}</p>
 
-        <div hidden={!showButtons} className="card-actions justify-end">
-          <button onClick={primaryAction} className="btn btn-primary">
+        <div className="card-actions justify-end">
+          <button
+            hidden={!namePrimary?.length}
+            onClick={primaryAction}
+            className="btn btn-primary"
+          >
             {namePrimary}
           </button>
-          <button onClick={secondaryAction} className="btn btn-secondary">
+          <button
+            hidden={!nameSeconday?.length}
+            onClick={secondaryAction}
+            className="btn btn-secondary"
+          >
             {nameSeconday}
           </button>
         </div>

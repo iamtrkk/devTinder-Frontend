@@ -32,7 +32,7 @@ const Connections = () => {
       {connections?.length ? (
         <div className="flex flex-wrap gap-5">
           {connections.map((user) => (
-            <User key={user._id} user={user} showButtons={false} />
+            <User namePrimary={'Chat'} primaryAction={()=> navigate(user._id)} key={user._id} user={user}/>
           ))}
         </div>
       ) : (
