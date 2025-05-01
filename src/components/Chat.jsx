@@ -22,7 +22,7 @@ const Chat = () => {
     socket.emit("joinChat", {
       loggedInUser,
       targetUserId,
-      firstName: user.firstName,
+      firstName: user?.firstName,
     });
 
     // Now we will listen to the messageReceived event from backend to get the message sent from users
@@ -74,7 +74,7 @@ const Chat = () => {
       <h1 className="p-5 border-b border-gray-600">Chat</h1>
 
       <div className="flex-1 overflow-scroll p-5">
-        {messages.map((msg, i) => {
+        {messages?.map((msg, i) => {
           return (
             <div
               key={i}
