@@ -1,3 +1,44 @@
+## Dev Tinder Frontend 🚀
+
+This project was created while learning **NodeJS** from namaste node.js course to integrate node js APIs. It is the frontend application for the **Dev Tinder** platform and consumes RESTful APIs provided by the Dev Tinder backend.
+
+The goal of this project is to understand real-world frontend concepts such as component-based architecture, state management, API integration, and building fast, modern user interfaces with React.
+
+---
+
+## 🛠️ Tech Stack
+
+* **React** – UI library
+* **Vite** – Fast build tool and dev server
+* **JavaScript (JSX)** – Component development
+* **HTML & CSS** – UI structure and styling
+* **REST APIs** – Backend integration
+
+---
+
+## 📌 Features
+
+* User-friendly UI for Dev Tinder platform
+* Integration with Dev Tinder backend APIs
+* Component-based and reusable UI design
+* Fast development and hot module replacement using Vite
+
+---
+
+## 📌 Note
+
+This project is built for **learning purposes** and may not be production-ready. Enhancements, optimizations, and UI improvements will be added as learning continues.
+
+---
+
+## 👨‍💻 Author
+
+**Tarique Anwar**
+
+Happy Coding! 😊
+
+---
+
 # React + Vite
 
 # AWS
